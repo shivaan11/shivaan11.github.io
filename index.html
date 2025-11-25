@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robotics & Controls Engineer Portfolio</title>
+    <meta name="description"
+        content="Portfolio of a Robotics & Controls Engineer specializing in embedded systems, AI, and automation.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&family=Orbitron:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Three.js (UMD for local file support) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Header / Navigation -->
+    <header id="header">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="mailto:shivaansood@gmail.com"><i class="fas fa-envelope"></i> shivaansood@gmail.com</a>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <a href="resume.pdf" target="_blank" class="btn btn-resume">Resume</a>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-nav">
+            <ul class="mobile-nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="resume.pdf" target="_blank" class="btn btn-resume-mobile">Resume</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container hero-container">
+            <div class="hero-content fade-in-up">
+                <h2 class="greeting">Hi, I am</h2>
+                <h1 class="name glow-text">Shivaan Sood</h1>
+                <h3 class="role">Mechanical Engineer | Controls & Robotics</h3>
+                <p class="hero-description">
+                    Mechanical Engineer specializing in controls, robotics, and system automation. Experienced in
+                    diagnosing complex, cross-disciplinary problems and implementing end-to-end solutions from embedded
+                    software to process optimization.
+                </p>
+                <div class="hero-actions">
+                    <a href="resume.pdf" target="_blank" class="btn btn-primary">Resume</a>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/shivaan-sood-783478247/" target="_blank"
+                            aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/shivaan11" target="_blank" aria-label="GitHub"><i
+                                class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="hero-metrics">
+                    <div class="metric-item">
+                        <span class="metric-number">10+</span>
+                        <span class="metric-label">Years in Robotics</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-number">30+</span>
+                        <span class="metric-label">Awards Won</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-number">50+</span>
+                        <span class="metric-label">Technologies</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image fade-in-up delay-200">
+                <img src="profile.jpg" alt="Shivaan Sood">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title glow-text">About Me</h2>
+            <div class="about-content fade-in-up">
+                <p>
+                    I'm a Mechanical Engineering student at UC San Diego specializing in Controls & Robotics. My journey
+                    in robotics started over a decade ago with FIRST Robotics and the World Robotics Olympiad, where I
+                    led teams to 6 international and 25+ national/regional competitions.
+                </p>
+                <p>
+                    I specialize in diagnosing complex, cross-disciplinary problems—from embedded software integration
+                    to process optimization—and implementing end-to-end solutions. My experience spans AI/ML instruction
+                    with NVIDIA Jetson, control systems design, and building automated workflows that improve
+                    efficiency.
+                </p>
+                <p>
+                    I'm driven to translate engineering skills into impactful solutions for real-world systems. Whether
+                    it's designing medical devices, teaching robotics to the next generation, or deploying computer
+                    vision on embedded platforms, I thrive at the intersection of hardware, software, and human-centered
+                    design.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title glow-text">Projects</h2>
+            <p class="section-subtitle">Highlighted robotics and controls projects.</p>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <article class="project-card fade-in-up">
+                    <div class="project-image">
+                        <div class="img-placeholder"><i class="fas fa-heartbeat"></i></div>
+                    </div>
+                    <div class="project-details">
+                        <h3 class="project-title">Maneuverable Rigid Intubating Stylet</h3>
+                        <p class="project-desc">
+                            Senior Design Project at UCSD designing a controllable intubation stylet to improve airway
+                            access during endotracheal procedures in ICU and emergency settings. Developing a
+                            cable-driven articulation mechanism for ±20° tip movement with one-hand thumb control.
+                        </p>
+                        <ul class="project-tags">
+                            <li>Medical Device Design</li>
+                            <li>CAD Modeling</li>
+                            <li>SolidWorks</li>
+                            <li>Prototyping</li>
+                        </ul>
+                        <p class="project-quote">"Biocompatible, single-use device for high-stress clinical
+                            environments."</p>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card fade-in-up">
+                    <div class="project-image">
+                        <div class="img-placeholder"><i class="fas fa-mobile-alt"></i></div>
+                    </div>
+                    <div class="project-details">
+                        <h3 class="project-title">EnNoWait - Queue Management System</h3>
+                        <p class="project-desc">
+                            Co-founded and led development of a patented queue-management app to reduce congestion at
+                            essential services during COVID-19. Oversaw system design, UX/UI optimization, and investor
+                            presentations that improved user adoption and operational efficiency.
+                        </p>
+                        <ul class="project-tags">
+                            <li>Android Development</li>
+                            <li>System Design</li>
+                            <li>UI/UX</li>
+                            <li>Entrepreneurship</li>
+                        </ul>
+                        <p class="project-quote">"Patented solution deployed during critical pandemic period."</p>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card fade-in-up">
+                    <div class="project-image">
+                        <div class="img-placeholder"><i class="fas fa-trophy"></i></div>
+                    </div>
+                    <div class="project-details">
+                        <h3 class="project-title">Team NeXT - Competitive Robotics</h3>
+                        <p class="project-desc">
+                            Led competitive robotics teams for over 10 years in FIRST Robotics and World Robotics
+                            Olympiad, advancing to 6 international and 25+ national/regional competitions. Earned 15
+                            regional, 12 national, and 2 international awards through innovation in mechanical design,
+                            programming, and strategic gameplay.
+                        </p>
+                        <ul class="project-tags">
+                            <li>FIRST Robotics</li>
+                            <li>Mechanical Design</li>
+                            <li>Programming</li>
+                            <li>Team Leadership</li>
+                        </ul>
+                        <p class="project-quote">"10+ years of robotics excellence, 30+ awards across international
+                            competitions."</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title glow-text">Experience</h2>
+            <div class="experience-list">
+                <!-- Experience 1 -->
+                <div class="experience-card fade-in-up">
+                    <div class="exp-header">
+                        <h3 class="exp-role">AI and Machine Learning Instructor</h3>
+                        <span class="exp-company">iD Tech (UCLA and Caltech)</span>
+                        <span class="exp-date">July 2025 – August 2025</span>
+                    </div>
+                    <ul class="exp-bullets">
+                        <li>Diagnosed and resolved technical issues in real time while guiding students through AI/ML
+                            and embedded robotics projects using NVIDIA Jetson and Python.</li>
+                        <li>Guided 22 students through data collection, embedded integration, and live debugging across
+                            hardware, software, and network layers.</li>
+                        <li>Consistently earned 95%+ parent and student satisfaction ratings and was recognized by
+                            program leads for professionalism and high student engagement.</li>
+                    </ul>
+                </div>
+
+                <!-- Experience 2 -->
+                <div class="experience-card fade-in-up">
+                    <div class="exp-header">
+                        <h3 class="exp-role">Part-Time Robotics Instructor</h3>
+                        <span class="exp-company">Brains & Motion Education</span>
+                        <span class="exp-date">October 2024 – April 2025</span>
+                    </div>
+                    <ul class="exp-bullets">
+                        <li>Delivered robotics and coding instruction to K–8 students, adapting complex engineering
+                            concepts into clear, engaging lessons.</li>
+                        <li>Troubleshot hardware and programming issues in real time across platforms like LEGO Spike,
+                            VEX, and Arduino-based systems.</li>
+                    </ul>
+                </div>
+
+                <!-- Experience 3 -->
+                <div class="experience-card fade-in-up">
+                    <div class="exp-header">
+                        <h3 class="exp-role">Process Engineer Intern</h3>
+                        <span class="exp-company">Capgemini</span>
+                        <span class="exp-date">August 2023 – December 2023</span>
+                    </div>
+                    <ul class="exp-bullets">
+                        <li>Diagnosed workflow inefficiencies and engineered automated solutions using Microsoft Power
+                            Apps, Power Automate, and Excel VBA.</li>
+                        <li>Designed an application suite that cut escalation response times by 15% and streamlined
+                            cross-team communication.</li>
+                        <li>Built a VBA-driven data management tool that reduced processing time by 30% through logic
+                            automation and input validation.</li>
+                    </ul>
+                </div>
+
+                <!-- Experience 4 -->
+                <div class="experience-card fade-in-up">
+                    <div class="exp-header">
+                        <h3 class="exp-role">Head Coach – World Robotics Olympiad</h3>
+                        <span class="exp-company">RoboClub</span>
+                        <span class="exp-date">June 2023 – December 2023</span>
+                    </div>
+                    <ul class="exp-bullets">
+                        <li>Designed and implemented a robotics training curriculum emphasizing system design, coding,
+                            and real-time problem solving.</li>
+                        <li>Mentored multiple teams through performance analysis, debugging, and design iteration,
+                            resulting in two rookie teams advancing to India Nationals.</li>
+                        <li>Recognized by program directors for technical mentorship and leadership excellence in
+                            guiding students through high-stakes challenges.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Coursework Section -->
+    <section id="education" class="section">
+        <div class="container">
+            <h2 class="section-title glow-text">Education & Coursework</h2>
+            <div class="education-content fade-in-up">
+                <div class="edu-block">
+                    <h3 class="degree">Bachelor of Science in Mechanical Engineering</h3>
+                    <p class="institution">University of California San Diego</p>
+                    <p class="grad-date">Expected Graduation: March 2026</p>
+                    <ul class="edu-details">
+                        <li>Specialization in Controls & Robotics</li>
+                        <li>Senior Design: Maneuverable Rigid Intubating Stylet for emergency medical procedures</li>
+                    </ul>
+                </div>
+
+                <div class="coursework-block">
+                    <h3 class="coursework-title">Relevant Coursework</h3>
+                    <div class="course-lists">
+                        <div class="course-category">
+                            <h4>Controls & Robotics</h4>
+                            <ul>
+                                <li>Control Systems (MAE 143A/B)</li>
+                                <li>Autonomous Vehicles (MAE 148)</li>
+                                <li>Experimental Techniques (MAE 170)</li>
+                            </ul>
+                        </div>
+                        <div class="course-category">
+                            <h4>Math & Analysis</h4>
+                            <ul>
+                                <li>Probability & Statistics (MAE 108)</li>
+                                <li>MATLAB Programming (MAE 8)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title glow-text">My Skills</h2>
+            <p class="section-subtitle">Specializing in robotics, control systems, and intelligent automation.</p>
+
+            <div class="skills-grid">
+                <div class="skill-category fade-in-up">
+                    <h3>AI & Computer Vision</h3>
+                    <ul>
+                        <li>NVIDIA Jetson Orin Nano</li>
+                        <li>TensorFlow, OpenCV, RoboFlow</li>
+                        <li>Model training & inference</li>
+                        <li>Real-time detection</li>
+                    </ul>
+                </div>
+                <div class="skill-category fade-in-up">
+                    <h3>Programming</h3>
+                    <ul>
+                        <li>Python, C/C++, Bash</li>
+                        <li>MATLAB, JavaScript</li>
+                        <li>Android, iOS/Swift</li>
+                        <li>Git, Docker, Kubernetes</li>
+                    </ul>
+                </div>
+                <div class="skill-category fade-in-up">
+                    <h3>Embedded Systems</h3>
+                    <ul>
+                        <li>Arduino, Raspberry Pi</li>
+                        <li>Embedded Linux, SSH</li>
+                        <li>STM32 Microcontrollers</li>
+                        <li>Soldering</li>
+                    </ul>
+                </div>
+                <div class="skill-category fade-in-up">
+                    <h3>CAD & Simulation</h3>
+                    <ul>
+                        <li>SolidWorks, Fusion 360</li>
+                        <li>AutoCAD</li>
+                        <li>MATLAB Simscape Multibody</li>
+                        <li>ANSYS</li>
+                    </ul>
+                </div>
+                <div class="skill-category fade-in-up">
+                    <h3>Fabrication</h3>
+                    <ul>
+                        <li>3D Printing (MakerBot)</li>
+                        <li>CNC & CAM</li>
+                        <li>Haas Mill, Tormach Lathe</li>
+                        <li>Pneumatic systems, Welding</li>
+                    </ul>
+                </div>
+                <div class="skill-category fade-in-up">
+                    <h3>Automation & Tools</h3>
+                    <ul>
+                        <li>ROS2</li>
+                        <li>Power Apps, Power Automate</li>
+                        <li>Excel VBA</li>
+                        <li>Process Optimization</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title glow-text">Let's Collaborate</h2>
+            <p class="section-subtitle">Open to internships, jobs, and collaborations in robotics & AI.</p>
+
+            <div class="contact-content fade-in-up">
+                <div class="contact-info">
+                    <p>
+                        I am always looking for new challenges and opportunities to apply my skills in robotics, control
+                        systems, and automation.
+                        Feel free to reach out if you have a project in mind, want to collaborate, or just want to
+                        connect.
+                    </p>
+                    <div class="contact-methods">
+                        <a href="mailto:shivaansood@gmail.com" class="contact-link"><i class="fas fa-envelope"></i>
+                            shivaansood@gmail.com</a>
+                        <a href="tel:+18583490670" class="contact-link"><i class="fas fa-phone"></i> +1 (858)
+                            349-0670</a>
+                    </div>
+                </div>
+
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="Your Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <ul class="footer-nav">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <p class="copyright">&copy; 2025 Shivaan Sood. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
