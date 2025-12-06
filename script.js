@@ -190,3 +190,58 @@ const animate = () => {
 };
 
 animate();
+
+// Modal System
+const modal = document.getElementById('project-modal');
+const modalBody = document.querySelector('.modal-body');
+const closeBtn = document.querySelector('.close-modal');
+
+// Open Modal Function
+window.openModal = function (contentId) {
+    const content = document.getElementById(contentId);
+    if (!content) return;
+
+    // Populate modal with content
+    modalBody.innerHTML = content.innerHTML;
+
+    // Show modal
+    modal.style.display = 'block';
+    // Small delay to allow display:block to apply before adding opacity class for transition
+    setTimeout(() => {
+        modal.classList.add('show');
+    }, 10);
+
+    // Disable body scroll
+    document.body.style.overflow = 'hidden';
+};
+
+// Close Modal Function
+function closeModal() {
+    modal.classList.remove('show');
+
+    // Wait for transition to finish before hiding
+    setTimeout(() => {
+        modal.style.display = 'none';
+        modalBody.innerHTML = ''; // Clear content
+        document.body.style.overflow = 'auto'; // Re-enable scroll
+    }, 300);
+}
+
+// Event Listeners for Closing
+if (closeBtn) {
+    closeBtn.addEventListener('click', closeModal);
+}
+
+// Close on click outside
+window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        closeModal();
+    }
+});
+
+// Close on Escape key
+window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('show')) {
+        closeModal();
+    }
+});

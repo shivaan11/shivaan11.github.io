@@ -142,6 +142,111 @@
             <p class="section-subtitle">Highlighted robotics and controls projects.</p>
 
             <div class="projects-grid">
+                <!-- Project New -->
+                <article class="project-card fade-in-up" onclick="openModal('racecar-modal')">
+                    <div class="project-image">
+                        <div class="img-placeholder"><i class="fas fa-car"></i></div>
+                    </div>
+                    <div class="project-details">
+                        <h3 class="project-title">Autonomous 1/10th Scale Racecar</h3>
+                        <p class="project-desc">
+                            Designed and deployed a fully autonomous racecar using ROS 2 and NVIDIA Jetson Nano.
+                            Engineered a robust Sensor Fusion pipeline (EKF) combining GPS and IMU for stable 50Hz pose
+                            estimation.
+                        </p>
+                        <ul class="project-tags">
+                            <li>ROS 2 (Foxy)</li>
+                            <li>Sensor Fusion (EKF)</li>
+                            <li>Trajectory Optimization</li>
+                            <li>C++ / Python</li>
+                            <li>NVIDIA Jetson</li>
+                        </ul>
+                        <p class="project-quote">"Achieved stable high-speed navigation through multi-sensor fusion and
+                            time-optimal planning."</p>
+                        <button class="btn-text">View Details <i class="fas fa-arrow-right"></i></button>
+                    </div>
+
+                    <!-- Hidden Full Content -->
+                    <div id="racecar-modal" class="hidden-content">
+                        <div class="modal-header-content">
+                            <h2>Autonomous 1/10th Scale Racecar: Sensor Fusion & Trajectory Optimization</h2>
+                            <p class="modal-subtitle">Course: UCSD MAE 148 – Introduction to Autonomous Vehicles | Role:
+                                Team Member (Team 5)</p>
+                            <div class="modal-links">
+                                <a href="#" target="_blank" class="btn btn-sm"><i class="fab fa-github"></i> GitHub
+                                    Repository</a>
+                                <a href="#" target="_blank" class="btn btn-sm"><i class="fas fa-link"></i> Course
+                                    Org</a>
+                            </div>
+                        </div>
+
+                        <div class="modal-body-content">
+                            <h3>Project Overview</h3>
+                            <p>This project involved designing and deploying a fully autonomous 1/10th scale racecar
+                                capable of high-speed navigation. The course began as a guided implementation of the
+                                UCSD Robocar Framework, where we built a standard autonomous vehicle using a Jetson Nano
+                                and ROS 2.</p>
+                            <p>It evolved into an open-ended research capstone where my team (Team 5) chose to push the
+                                platform's limits by moving beyond basic lane following. We engineered a robust Sensor
+                                Fusion pipeline and implemented Trajectory Optimization to achieve faster, more reliable
+                                autonomous laps compared to standard PID control methods.</p>
+
+                            <h3>Key Technical Contributions</h3>
+
+                            <h4>1. Multi-Sensor Fusion (GPS + IMU + Vision)</h4>
+                            <p>To solve the instability of high-speed control, we moved away from simple reactive
+                                vision. We developed a sensor fusion node using an Extended Kalman Filter (EKF).</p>
+                            <ul>
+                                <li><strong>The Challenge:</strong> The GPS provided global positioning but at a slow
+                                    update rate (10Hz), while the onboard IMU provided fast but drifty data (100Hz).
+                                </li>
+                                <li><strong>The Solution:</strong> We fused the 10Hz GPS pose from a Point One
+                                    Navigation module with high-frequency IMU data from a Luxonis OAK-D Lite camera.
+                                </li>
+                                <li><strong>Result:</strong> This produced a stable, high-frequency (30-50Hz) pose
+                                    estimation, enabling the vehicle to maintain localization even during high-speed
+                                    maneuvers where raw GPS data would lag.</li>
+                            </ul>
+
+                            <h4>2. Time-Optimal Trajectory Planning</h4>
+                            <p>Instead of simply following the center of the lane, we implemented the TUM Minimum-Time
+                                Optimizer to mathematically generate the fastest possible racing line around the track.
+                            </p>
+                            <ul>
+                                <li><strong>Pipeline:</strong> We recorded track waypoints using the DonkeyCar
+                                    framework, converted them into a format compatible with the TUM optimizer, and
+                                    generated a new path that optimized for curvature and velocity.</li>
+                                <li><strong>Velocity Profiling:</strong> The optimizer generated a specific velocity
+                                    profile, allowing the car to accelerate on straights and braking appropriately
+                                    before entering corners, rather than running at a static speed.</li>
+                            </ul>
+
+                            <h4>3. Embedded System & Perception</h4>
+                            <ul>
+                                <li><strong>Hardware Architecture:</strong> The car runs on a Jetson Nano utilizing a
+                                    VESC (Vedder Electronic Speed Controller) for precise motor control.</li>
+                                <li><strong>ROS 2 Architecture:</strong> We utilized a modular node-based system in ROS
+                                    2 (Foxy), separating sensing, perception, and control layers.</li>
+                                <li><strong>Computer Vision:</strong> We integrated a Luxonis OAK-D Lite camera for
+                                    visual perception. While our final racing logic relied heavily on GPS-Fusion, we
+                                    explored deploying Roboflow models to the OAK-D's VPU for real-time object
+                                    detection, offloading compute from the main CPU.</li>
+                            </ul>
+
+                            <h3>Tech Stack</h3>
+                            <ul class="tech-stack-list">
+                                <li><strong>Hardware:</strong> NVIDIA Jetson Nano, VESC 6, Luxonis OAK-D Lite, Point One
+                                    Navigation GPS.</li>
+                                <li><strong>Software:</strong> ROS 2 (Foxy), Docker, Python, C++.</li>
+                                <li><strong>Algorithms:</strong> Extended Kalman Filter (EKF), PID Control, TUM
+                                    Trajectory Optimization.</li>
+                                <li><strong>Tools:</strong> Git/GitLab, Rviz (Visualization), Foxglove (Data Analysis).
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
                 <!-- Project 1 -->
                 <article class="project-card fade-in-up">
                     <div class="project-image">
@@ -447,6 +552,16 @@
             <p class="copyright">&copy; 2025 Shivaan Sood. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Project Modal -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <!-- Content will be injected here -->
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
